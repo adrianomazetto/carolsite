@@ -1,0 +1,156 @@
+.product-detail-container {
+    max-width: 1000px;
+    margin: 40px auto; /* Centraliza e adiciona espaço superior/inferior */
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    gap: 40px; /* Espaço entre a imagem e os detalhes */
+}
+
+/* ------------------- */
+/* Coluna da Imagem */
+/* ------------------- */
+.product-image-area {
+    flex: 1; 
+    min-width: 350px;
+}
+
+.product-image-box {
+    /* Estilo do placeholder da imagem: fundo branco com borda preta sutil */
+    width: 100%;
+    padding-top: 100%; /* Truque para criar um quadrado (proporção 1:1) */
+    background-color: #ffffff;
+    border: 1px solid #333; /* Borda da imagem na cor mais escura */
+    box-sizing: border-box;
+    border-radius: 5px;
+    /* Placeholder Visual: */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+/* ------------------- */
+/* Coluna dos Detalhes */
+/* ------------------- */
+.product-info-area {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Nome do Produto */
+.product-name {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5rem;
+    color: #7b4f3b; /* Cor marrom */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Preço */
+.product-price-label {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    color: #f08080; /* Cor pêssego/rosa claro */
+    margin-bottom: 5px;
+}
+
+.product-price-value {
+     font-family: 'Press Start 2P', cursive;
+     font-size: 1.2rem;
+     color: #333;
+     margin-bottom: 20px;
+}
+
+/* Descrição */
+.product-description-label {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+    color: #b0b0b0; /* Cor cinza claro */
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.product-description-text {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* ------------------- */
+/* Botões de Ação */
+/* ------------------- */
+.product-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: auto; /* Empurra os botões para baixo */
+}
+
+/* Botão "Add no Carrinho" */
+.add-to-cart-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 25px;
+    background-color: #c0e0ff; /* Cor azul claro */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.7rem;
+    color: #333;
+    box-shadow: 0 4px 0 #99c0e0; /* Efeito 3D/retrô */
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.add-to-cart-button:active {
+    transform: translateY(4px);
+    box-shadow: none;
+}
+
+.add-to-cart-button .fa-shopping-bag {
+    margin-left: 10px;
+    font-size: 1.2em;
+}
+
+/* Botão "Favoritar" (Coração) */
+.favorite-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #7b4f3b; /* Cor marrom para o coração */
+    font-size: 2.2rem;
+    transition: color 0.2s, transform 0.2s;
+    padding: 5px;
+}
+
+.favorite-button:hover {
+    color: #ff6347;
+    transform: scale(1.1);
+}
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    .product-detail-container {
+        flex-direction: column;
+        gap: 20px;
+        margin: 20px;
+        padding: 20px;
+    }
+    
+    .product-image-area {
+        min-width: 100%;
+    }
+    
+    .product-actions {
+        /* Centraliza os botões em telas menores */
+        justify-content: center; 
+    }
+}

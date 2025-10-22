@@ -1,0 +1,121 @@
+.favorites-page-main {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.favorites-title {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* ------------------------------------------- */
+/* 1. CONTAINER E CARD DE CADA ITEM FAVORITO */
+/* ------------------------------------------- */
+
+.favorites-items-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaço entre os cards */
+}
+
+.favorite-item-card {
+    display: flex;
+    background-color: #ffffff;
+    padding: 15px;
+    border: 1px solid #c0c0c0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.item-left {
+    flex-shrink: 0;
+    margin-right: 20px;
+}
+
+/* Caixa da Imagem */
+.item-image-box {
+    width: 80px;
+    height: 80px;
+    border: 1px solid black;
+    background-color: #ffffff;
+    /* Estilo para imagem de fundo (simulação) */
+    background-size: cover;
+    background-position: center;
+}
+
+.item-right {
+    flex-grow: 1;
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o nome e ações */
+    justify-content: space-between;
+}
+
+/* Nome do Produto */
+.item-name {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    color: #7b4f3b; /* Cor marrom */
+    text-transform: uppercase;
+    flex-grow: 1;
+    margin-right: 20px;
+}
+
+/* Controles de Ação */
+.item-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Botão Lixo/Remover (Estilo Rosa) */
+.remove-btn {
+    background-color: #ff6384; /* Rosa forte (igual ao carrinho) */
+    color: white;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    box-shadow: 0 3px 0 #d95471;
+    transition: transform 0.1s;
+}
+
+.remove-btn:active {
+    transform: translateY(3px);
+    box-shadow: none;
+}
+
+/* Botão Adicionar ao Carrinho (Opicional: Estilo Azul Claro) */
+.add-to-cart-btn {
+    background-color: #c0e0ff; /* Azul claro */
+    color: #333;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    box-shadow: 0 3px 0 #99c0e0;
+    transition: transform 0.1s;
+}
+
+.add-to-cart-btn:active {
+    transform: translateY(3px);
+    box-shadow: none;
+}
+
+
+/* Mensagem de Carrinho Vazio */
+.empty-favorites-message {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: #888;
+    padding: 40px;
+    border: 1px dashed #ccc;
+    border-radius: 5px;
+    margin-top: 30px;
+}

@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+    margin: 0;
+    background-color: #fff;
+    font-family: "Press Start 2P", system-ui;
+    overflow-x: hidden;
+}
+
+        header {
+            position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background-color: #F9E5CA; /* bege suave */
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 0 20px;
+      box-sizing: border-box;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      z-index: 1000;
+        }
+
+        .search-box {
+            display: flex;
+      align-items: center;
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+      width: 700px;
+      height:20px;
+            
+        }
+
+        .search-box input {
+            border: none;
+      outline: none;
+      background: none;
+      font-size: 10px;
+      color: #5e4a3c;
+      width: 100%;
+      padding: 0 0 0 10px;
+    font-family: "Press Start 2P", system-ui;
+        }
+
+        .search-box input::placeholder {
+            color: #bbaea5;
+      font-weight: 500;
+        }
+
+        .search-box i {
+            color: #7b6a5c;
+      margin-right: 8px;
+      font-size: 14px;
+        }
+
+        .icon-btn {
+            width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background-color: #6b3c2a;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      cursor: pointer;
+      transition: 0.2s;
+        }
+
+        .icon-btn:hover {
+            background-color: #8b5a3d;
+        }
+
+        .icon-btn i {
+            font-size: 16px;
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width:88px;
+            height:88px;
+        }
+
+         main {
+      margin-top: 142px;
+      padding: 20px;
+    }
+    .botoes{
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
+    .image-principal{
+      margin-top: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100vw;
+    }
+    .main-img{
+      width: 81vw;
+      height: 700px;
+      border-radius: 10px;
+    }
+    .category-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 50px;
+    gap: 100px; /* Espaço entre os botões */
+}
+
+/* Estilos base para todos os botões */
+.category-button {
+    /* Usando a fonte Press Start 2P conforme solicitado */
+    font-family: 'Press Start 2P', cursive;
+    /* Ajustando o tamanho da fonte para algo legível, a fonte é pequena por natureza */
+    font-size: 20px; 
+    
+    /* Configurações de padding e borda */
+    padding: 25px 45px;
+    border: none; /* Sem borda visível */
+    border-radius: 5px; /* Bordas levemente arredondadas */
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    
+    /* Cor da sombra ou "pixel art effect" sutilmente no texto */
+    color: #444444; 
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1); 
+    
+    /* Garante que o texto não quebre em múltiplas linhas */
+    white-space: nowrap; 
+}
+
+/* Estilo para os botões "Padrão" (categ. 1 e 3) */
+.category-button.default {
+    /* Cor de fundo bege claro, similar à imagem */
+    background-color: #e6e4d4; 
+}
+
+/* Estilo para os botões "Ativos/Selecionados" (categ. 2 e 4) */
+.category-button.active {
+    /* Cor de fundo rosa/vermelho claro, similar à imagem */
+    background-color: #ff8ca3; 
+    /* Texto ligeiramente mais escuro para melhor contraste no rosa */
+    color: #333333; 
+}
+
+/* Efeito de hover (opcional, para dar interatividade) */
+.category-button:hover {
+    opacity: 0.9;
+    /* Um pequeno ajuste para simular um "clique" ou foco */
+    transform: translateY(-1px); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Efeito de click (opcional) */
+.category-button:active {
+    opacity: 1;
+    transform: translateY(0);
+    box-shadow: none;
+}
+.products-section-filtered {
+    padding: 30px 20px; /* Espaçamento interno (um pouco menor que antes) */
+    max-width: 1200px; /* Largura máxima da seção no centro da página */
+    margin: 0 auto; /* Centraliza a seção */
+    /* Removido o text-align: center; pois não há título */
+}
+
+/* Container do Grid de Produtos (o mais importante para o layout) */
+.products-grid-container {
+    display: grid;
+    /* Configuração responsiva: */
+    /* Colunas flexíveis, no mínimo 250px cada. */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px; /* Espaço entre os cards de produto */
+}
+
+
+/* Estilos de Exemplo para o Card de Produto (para quando o backend injetar os itens) */
+/* Mantive esses estilos para que você tenha uma base visual para os produtos. */
+.product-card {
+    background-color: #ffffff;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.product-title {
+    font-family: Arial, sans-serif;
+    font-size: 1.1rem;
+    margin: 5px 0;
+    color: #444;
+}
+
+.product-price {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    color: #e8491d;
+    margin-bottom: 15px;
+}
